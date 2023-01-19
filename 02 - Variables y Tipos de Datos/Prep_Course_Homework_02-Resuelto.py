@@ -28,7 +28,7 @@ type(8.5)
 type(a)
 
 
-# 4) Crear una variable que contenga tu nombre
+# 
 
 # In[2]:
 
