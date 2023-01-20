@@ -66,3 +66,110 @@ while n == 0:
     for num in range(5):
         print(num + 1)
         n += 1
+
+# 8) Crear un ciclo while dentro de un ciclo for
+
+numero = 3
+for i in range(numero):
+    numero = 0
+    while numero < 3:
+        print('vuelta '+ str(numero))
+        numero += 1
+
+# 9) Imprimir los números primos existentes entre 0 y 30
+contador = 0
+
+for valor in range(0,31):
+    if valor % 2 == 0:
+        print(valor)
+    contador += 1
+
+print(contador)
+
+# 10) ¿Se puede mejorar el proceso del punto 9? Utilizar las 
+# sentencias break y/ó continue para tal fin
+
+for valor in range(0,31):
+    if valor % 2 == 0:
+        print(valor)
+    else:
+        continue 
+
+# 11) En los puntos 9 y 10, se diseño un código que encuentra números primos
+#  y además se lo optimizó. ¿Es posible saber en qué medida se optimizó?
+
+contador1 = 0
+for valor in range(0,31):
+    if valor % 2 == 0:
+        print(valor)
+    else:
+        continue 
+
+    contador1 += 1
+print(contador1)
+
+#  nota --> en el primer ciclo entra todas las veces mientras que en el otro proceso 
+#           es mas rapido por que salta ese dato y no entra al contador
+
+# 12) Si la cantidad de números que se evalúa es mayor a treinta, esa optimización 
+# crece?
+
+print ( ' ')
+
+contador = 0
+
+for valor in range(0,101):
+    if valor % 2 == 0:
+        print(valor)
+    contador += 1
+
+print('========================================' +str(contador))
+
+contador1 = 0
+for valor in range(0,101):
+    if valor % 2 == 0:
+        print(valor)
+    else:
+        continue 
+
+    contador1 += 1
+
+    
+print('=================================' + str(contador1))
+
+
+contador2 = 0
+for valor in range(0,101):
+    if valor % 2 == 0:
+        print(valor)
+    else:
+        continue 
+
+    contador2 += 1
+
+
+print('=================================' + str(contador2))
+
+# en el primero hace 101 mientras que continue hace 51 y el break 51 por lo que son
+# fundamentales usarlos para optimizar el codigo
+
+# 13) Aplicando continue, armar un ciclo while que solo imprima los valores 
+# divisibles por 12, dentro del rango de números de 100 a 300
+
+n = 99
+while (n <= 300):
+    n += 1
+    if (n % 12 != 0):
+        continue
+    print(n) 
+
+
+# 14) Utilizar la función **input()** que permite hacer ingresos por teclado, 
+# para encontrar números primos y dar la opción al usario de buscar el siguiente
+
+numero = int(input('Ingresa un numero'))
+
+for valor in range(1, numero + 1):
+    if numero % valor == 0:
+
+print('Es primo', valor)
